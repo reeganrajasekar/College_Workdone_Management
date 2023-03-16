@@ -16,9 +16,10 @@ if(!isset($_SESSION))
 $sid = $_SESSION["id"];
 $class = test_input($_POST['class']);
 $details = test_input($_POST['details']);
+$date = test_input($_POST['date']);
 
-$sql = "INSERT INTO workdone (sid,class,details)
-VALUES ('$sid','$class' ,'$details')";
+$sql = "INSERT INTO workdone (sid,class,details,status,date)
+VALUES ('$sid','$class' ,'$details','Waiting List','$date')";
 
 if ($conn->query($sql) === TRUE) {
     header("Location: /staff?page=1&msg=Workdone detail Added Successfully !");

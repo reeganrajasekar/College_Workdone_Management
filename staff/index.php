@@ -62,6 +62,10 @@ $sid = $_SESSION["id"];
                         <input required type="text" class="form-control"  name="class" placeholder="Class">
                         <label >Class</label>
                     </div>
+                    <div class="form-floating mb-3 ">
+                        <input required type="date" class="form-control"  name="date" placeholder="Date">
+                        <label >Date</label>
+                    </div>
                     <div class="form-group">
                         <textarea placeholder="Details" class="form-control" name="details" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
@@ -83,6 +87,7 @@ $sid = $_SESSION["id"];
                 <th>Class</th>
                 <th>Details</th>
                 <th>Date</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -97,7 +102,8 @@ $sid = $_SESSION["id"];
                             <td style="text-align:center"><?php echo($i) ?></td>
                             <td><?php echo($row["class"]) ?></td>
                             <td><?php echo($row["details"]) ?></td>
-                            <td><script>document.write(moment("<?php echo($row["reg_date"]) ?>").format("lll"))</script></td>
+                            <td><script>document.write(moment("<?php echo($row["date"]) ?>").format("ll"))</script></td>
+                            <td><?php echo($row["status"]) ?></td>
                         </tr>
                     <?php
                 }

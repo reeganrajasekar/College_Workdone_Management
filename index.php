@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Login</title>
+    <title>Staff Login</title>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="shortcut icon" href="/static/img/logo.png">
     <style>
@@ -26,7 +26,7 @@
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card" style="border-radius: 1rem;background-color:#f5f5f5;">
                         <form onsubmit="document.getElementById('loader').style.display='block'" action="/login.php" method="POST" class="card-body p-4 text-center">
-                            <h2 class="fw-bold mb-4 text-uppercase text-primary" style="font-weight:800">User Login</h2>
+                            <h2 class="fw-bold mb-4 text-uppercase text-primary" style="font-weight:800">Staff Login</h2>
                             <div class="form-floating mb-3">
                                 <input required type="email" name="email" class="form-control" id="floatingInput" placeholder="Email">
                                 <label for="floatingInput">Email</label>

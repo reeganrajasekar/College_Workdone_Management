@@ -8,16 +8,35 @@
 
     <br>  
     <form onsubmit="document.getElementById('loader').style.display='block'" action="/admin/action/report.php" class="row" method="post">
-        <div class="col-4"></div>
         <div class="form-floating mb-3 col-4">
-            <input required type="text" class="form-control"  name="sid" placeholder="Staff ID">
-            <label >Staff ID</label>
+            <select class="form-select mb-3" name="class" aria-label=".form-select-sm example" required>
+                <option selected disabled value="">Select Class</option>
+                <?php
+                    require("./layout/db.php");
+                    $result = $conn->query("SELECT DISTINCT class FROM workdone");
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_assoc()){
+                ?>
+                <option value="<?php echo($row["class"]) ?>"><?php echo($row["class"]) ?></option>
+                <?php
+                        }
+                    }else{
+                ?>
+                    <option disabled>There is No Class</option>
+                <?php } ?>
+            </select>
         </div>
-        <div class="col-4"></div>
-        <div class="col-4"></div>
-        <div class="col-4">
-            <button class="btn w-100" style="background-color:#2b74e2;color:#fff">Download</button>
+        <div class="form-floating mb-3 col-4">
+            <input required type="date" class="form-control"  name="start" placeholder="From Date">
+            <label >From Date</label>
         </div>
+        <div class="form-floating mb-3 col-4">
+            <input required type="date" class="form-control"  name="end" placeholder="To Date">
+            <label >To Date</label>
+        </div>
+        <center>
+            <button class="btn w-25 mt-4" style="background-color:#2b74e2;color:#fff;height:50px">Download</button>
+        </center>
     </form> 
     <br>
 </div>

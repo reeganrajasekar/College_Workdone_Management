@@ -25,6 +25,10 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link <?php if($_SERVER['PHP_SELF'] == '/admin/workdone.php'){ echo 'active'; } ?>" aria-current="page" href="/admin/workdone.php">Workdone</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link <?php if($_SERVER['PHP_SELF'] == '/admin/report.php'){ echo 'active'; } ?>" aria-current="page" href="/admin/report.php">Report</a>
                     </li>
                     
