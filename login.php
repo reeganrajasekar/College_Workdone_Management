@@ -18,12 +18,12 @@ if ($result->num_rows > 0) {
             header("Location: /staff/");
             die();
         } else {
-            header("Location: /?err=Email or Password is Wrong !");
+            header("Location: /signin.php?err=Email or Password is Wrong !");
             die();
         }
     }
 }else{
-    header("Location: /?err=Email or Password is Wrong !");
+    header("Location: /signin.php?err=Email or Password is Wrong !");
     die();
 }
 

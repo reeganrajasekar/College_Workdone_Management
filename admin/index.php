@@ -11,7 +11,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body style="background-color: #2b74e2;background-position:center;background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+<body style="background:url('/static/bg.jpg');background-position: center;background-size: cover;">
   <script>
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
